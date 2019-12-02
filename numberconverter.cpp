@@ -145,9 +145,17 @@ int main()
 		case 1:
 			printf("Onluk tabandaki sayiyi girin: ");
 			cin >> sayi;
-			printf("Cevrilmis hali: "); 
-			decimalToRoman(sayi);
-			break;
+			if(sayi<1 || sayi>3999)
+			{
+				printf("Hatali bir deger girdiniz..");
+				break;
+			}
+			else
+			{
+				printf("Cevrilmis hali: "); 
+				decimalToRoman(sayi);
+				break;
+			}
 		case 2:
 			printf("Roma rakamini girin: ");
 			cin >> myInput;
@@ -161,4 +169,7 @@ int main()
 	
 	// Emrecan Balgun
 	// 2017280011
+	// Kaynak: https://www.geeksforgeeks.org/converting-decimal-number-lying-between-1-to-3999-to-roman-numerals/
+	// https://www.geeksforgeeks.org/converting-roman-numerals-decimal-lying-1-3999/
+	// http://www.cplusplus.com/forum/beginner/53308/
 }
